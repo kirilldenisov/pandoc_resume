@@ -1,0 +1,159 @@
+% Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+% Copyright 2014 Mark Szepieniec <http://github.com/mszep>
+% 
+% ConText style for making a resume with pandoc. Inspired by moderncv.
+% 
+% This CSS document is delivered to you under the CC BY-SA 3.0 License.
+% https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+\startmode[*mkii]
+  \enableregime[utf-8]  
+  \setupcolors[state=start]
+\stopmode
+
+\setupcolor[hex]
+\definecolor[titlegrey][h=757575]
+\definecolor[sectioncolor][h=5F4B8B]
+\definecolor[rulecolor][h=8570b2]
+
+% Enable hyperlinks
+\setupinteraction[state=start, color=sectioncolor]
+
+\setuppapersize [A4][A4]
+\setuplayout    [width=middle, height=middle,
+                 backspace=20mm, cutspace=0mm,
+                 topspace=10mm, bottomspace=20mm,
+                 header=0mm, footer=0mm]
+
+%\setuppagenumbering[location={footer,center}]
+
+\setupbodyfont[11pt, helvetica]
+
+\setupwhitespace[medium]
+
+\setupblackrules[width=31mm, color=rulecolor]
+
+\setuphead[chapter]      [style=\tfd]
+\setuphead[section]      [style=\tfd\bf, color=titlegrey, align=middle]
+\setuphead[subsection]   [style=\tfb\bf, color=sectioncolor, align=right,
+                          before={\leavevmode\blackrule\hspace}]
+\setuphead[subsubsection][style=\bf]
+
+\setuphead[chapter, section, subsection, subsubsection][number=no]
+
+%\setupdescriptions[width=10mm]
+
+\definedescription
+  [description]
+  [headstyle=bold, style=normal,
+   location=hanging, width=18mm, distance=14mm, margin=0cm]
+
+\setupitemize[autointro, packed]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
+
+\setuptables[textwidth=max, HL=none]
+\setupxtable[frame=off,option={stretch,width}]
+
+\setupthinrules[width=15em] % width of horizontal rules
+
+\setupdelimitedtext
+  [blockquote]
+  [before={\setupalign[middle]},
+   indentnext=no,
+  ]
+
+
+\starttext
+
+\section[title={Kirill Denisov},reference={kirill-denisov}]
+
+\thinrule
+
+\startblockquote
+•
+\useURL[url1][mailto:79263722211@ya.ru][][79263722211@ya.ru]\from[url1]\crlf
+• \useURL[url2][t.me/maimedprince]\from[url2]\crlf
+• \useURL[url3][github.com/kirilldenisov]\from[url3]\crlf
+\stopblockquote
+
+\thinrule
+
+\subsection[title={Skills},reference={skills}]
+
+: {\bf Python} pandas, numpy, seaborn, jupyter (ipython), biopython
+
+: {\bf R} tidyverse, rmarkdown
+
+: {\bf Golang}
+
+: Knowledge of {\bf git}, {\bf linux}, {\bf docker}
+
+\subsection[title={Education},reference={education}]
+
+\startdescription{2017-2023}
+  Lomonosov MSU, Faculty of bioengineering and bioinformatics
+\stopdescription
+
+\subsection[title={Certiﬁcates},reference={certiﬁcates}]
+
+\startitemize
+\item
+  \useURL[url4][https://kirilldenisov.github.io/technosphere.pdf][][Web-Services
+  using Golang Course from mail.ru Technosphere]\from[url4]
+\item
+  \useURL[url5][https://kirilldenisov.github.io/ycloud_school.pdf][][School
+  of Future CTO from Yandex Cloud]\from[url5]
+\item
+  \useURL[url6][https://stepik.org/cert/219747][][Basics of Statistics
+  from Bioinformatics Institute]\from[url6]
+\item
+  \useURL[url7][https://stepik.org/cert/314249][][Data Analisys with R
+  from Bioinformatics Institute]\from[url7]
+\stopitemize
+
+\subsection[title={Experience},reference={experience}]
+
+{\bf Research on Epigenetic Adaptation of three-spined stickleback
+(Gasterosteus aculeatus) to Marine and Freshwater Conditions}
+
+\starttyping
+Tools used:
+
+* R
+* HISAT2
+* StereoGene
+* Bismark Bisulﬁte Mapper
+* MACS2
+\stoptyping
+
+{\bf Videocall project for Avito}
+
+\starttyping
+Tools used:
+
+* Golang
+* Amazon AWS SDK
+* Yandex Cloud API
+* Janus WEB RTC Server
+\stoptyping
+
+\subsection[title={Soft Skills},reference={soft-skills}]
+
+\startitemize
+\item
+  Human Languages:
+
+  \startitemize[packed]
+  \item
+    Russian (native speaker)
+  \item
+    English (C1)
+  \stopitemize
+\stopitemize
+
+\thinrule
+
+\stoptext
