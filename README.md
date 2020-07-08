@@ -1,6 +1,10 @@
 The Markdown Resume
 ===================
 
+Original repository is https://github.com/mszep/pandoc_resume
+
+You can find my up-to-date resume in output directory
+
 ### Instructions
 
 ```bash
